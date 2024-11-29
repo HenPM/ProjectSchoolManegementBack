@@ -1,0 +1,26 @@
+server:
+  port: 8888
+  ssl:
+    enabled: false
+spring:
+  application:
+    name: SchoolManagement
+  datasource:
+    url: jdbc:postgresql://localhost:5432/schoolManag
+    username: postgres
+    password: fen#20
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  flyway:
+    baseline-on-migrate: true
+
+springdoc:
+  api-docs:
+    path: /docs
+    paths-to-match: /api/**
+  swagger-ui:
+    path: /docs-ui
+    use-root-path: true
+    display-request-duration: true
